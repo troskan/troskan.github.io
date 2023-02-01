@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styling.css" />
+    <script defer src="learnJava.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <nav>
+  <ul>
+    <li class="home-button"><a href="#">Home233</a></li>
+    <li class="about-button"><a href="#">About</a></li>
+    <li class="contact-button"> <a href="#">Contact</a></li>
+    <li class="contact-button"> <a onclick="clickToLogin()" href="#" >Login</a></li>
+  </ul>
+</nav>
+    <form>
+    </button>
+    
+        <div id="login-container" class="login-container"style="display:none">
+          <label for="username"><b>Username</b></label>
+          <input
+            type="text"
+            class="form-box"
+            id="username"
+            placeholder="Enter Username"
+            name="username"
+            required
+          />
+
+          <label for="password"><b>Password</b></label>
+          <input
+            type="password"
+            class="form-box"
+            id="password"
+            placeholder="Enter Password"
+            name="password"
+            required
+          />
+
+          <button type="button" class="login-button" onclick="checkLogin()">
+            Login
+          </button>
+          <label>
+            <input
+              type="checkbox"
+              class="form-box"
+              checked="checked"
+              name="remember"
+            />
+            Remember me
+          </label>
+          <span class="psw"
+            ><a href="forgotpassword.html">Forgot password?</a></span
+          >
+        </div>
+        <div class="login-container2" id="login-container"style="display:none">
+          <span class="psw"
+            ><a href="forgotpassword.html">Forgot password?</a></span
+          >
+        </div>
+        
+      
+    </form>
+
+    <script src="learnJava.js"></script>
+  </body>
+</html>
