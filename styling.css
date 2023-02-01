@@ -1,0 +1,126 @@
+body {
+  background-image: url("Images\\ny-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.login-button2 {
+  position: relative;
+  left: 4.5cm; /* moves the button 20px to the right */
+}
+
+.parent {
+  display: flex;
+  height: 100vh; /* or any desired height */
+  align-items: center;
+  justify-content: center;
+}
+/* */
+.login-container {
+  position: relative;
+  left: 1.5cm;
+  background-color: rgba(0, 255, 0, 0.233);
+  padding-left: 0.3cm;
+  padding-right: 0.3cm;
+  padding-top: 0.3cm;
+  padding-bottom: 0.3cm;
+  display: flex;
+  width: 15%;
+  border-radius: 25px;
+}
+.imgcontainer {
+  float: left;
+  padding-right: 100px;
+}
+
+.form-box {
+  background-color: rgba(255, 255, 255, 0.849);
+  color: #cd69ff;
+  font-weight: bold;
+
+  position: top;
+}
+
+.pass_error {
+  background-color: rgb(255, 0, 0);
+  color: #cd69ff;
+  font-weight: bold;
+  font-size: xx-large;
+  text-align: center;
+  border: 3px rgb(27, 27, 27);
+  vertical-align: middle;
+}
+
+.return-forgpass {
+  color: #cd69ff;
+  font-weight: bold;
+  font-size: xx-large;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  display: flex;
+  text-shadow: 2px 2px 0px rgb(56, 56, 56);
+}
+
+.login-button:hover {
+  color: #00a824;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  transition: 0.5s;
+}
+
+/*NAVBAR*/
+nav {
+  background-color: rgba(0, 255, 0, 0.233);
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 0.4cm;
+  width: 8.5cm;
+  margin-left: 50px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10;
+  display: flex;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.home-button:hover {
+  color: #00a824;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  transition: 0.5s;
+}
+.contact-button:hover {
+  color: #00a824;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  transition: 0.5s;
+}
+.about-button:hover {
+  color: #00a824;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  transition: 0.5s;
+}
+.login-button:hover {
+  color: #00a824;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  transition: 0.5s;
+}

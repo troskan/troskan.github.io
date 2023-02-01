@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "username": "arne",
+            "password": "#dancer9#"
+        },
+        {
+            "username": "börje",
+            "password": "#dance.se#"
+        },
+        {
+            "username": "Svenne",
+            "password": "#dance.with#"
+        }
+    ]
+}
