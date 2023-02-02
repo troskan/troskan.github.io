@@ -26,13 +26,15 @@ function generateButtons() {
     .split("")
     .map(
       (letter) => `
+      <div id="keyboard" class="keyboard-container">
       <button
-        class="btn btn-lg btn-primary m-2"
+        class="btn btn-sm btn-primary m-2 custom-button-hangman"
         id="${letter}"
         onClick="handleGuess('${letter}')"
       >
         ${letter}
       </button>
+      </div>
     `
     )
     .join("");

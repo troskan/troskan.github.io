@@ -4,6 +4,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.custom-button-hangman {
+  padding: 0.2rem 0.5rem;
+}
+.keyboard-container {
+  display: inline-flex;
+}
 
 span {
   color: white;
