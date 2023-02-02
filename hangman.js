@@ -91,7 +91,7 @@ function reset() {
   document.getElementById("misstakes").innerHTML = 0;
   guessed = [];
 
-  document.getElementById("hangmanPic").src = "/images/hangman/0.jpg";
+  document.getElementById("hangmanPic").src = "/Images/hangman/0.jpg";
 
   randomWord();
   guessedWord();
