@@ -1,4 +1,19 @@
 // Define the function in the global scope
+function escapeButton() {
+  var gameButton = document.getElementsByClassName("game-button")[0];
+
+  gameButton.addEventListener("mouseover", function () {
+    var x = Math.floor(Math.random() * window.innerWidth);
+    var y = Math.floor(Math.random() * window.innerHeight);
+
+    gameButton.style.left = x + "px";
+    gameButton.style.top = y + "px";
+  });
+}
+function clickToLogin2() {
+  document.getElementByClass("login-container").style.display = "block";
+}
+// Define the function in the global scope
 function clickToLogin() {
   var loginContainer = document.getElementById("login-container");
   if (loginContainer.style.display === "none") {

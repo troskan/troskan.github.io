@@ -1,3 +1,27 @@
+.text-red {
+  color: rgb(255, 255, 255);
+}
+span {
+  color: white;
+}
+.text-center {
+  color: #fcf9f9;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.hangman-img {
+  color: #ffffff;
+  background-color: rgba(240, 248, 255, 0.925);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  outline: #00a824;
+}
+.hangman-text {
+  background-color: rgba(0, 0, 0, 0.644);
+  width: 15%;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 25%;
+}
 body {
   background-image: url("Images\\ny-bg.jpg");
   background-repeat: no-repeat;
@@ -11,14 +35,15 @@ body {
 
 .parent {
   display: flex;
-  height: 100vh; /* or any desired height */
+  height: 100cm; /* or any desired height */
   align-items: center;
   justify-content: center;
 }
 /* */
 .login-container {
-  position: relative;
-  left: 1.5cm;
+  position: fixed;
+  left: 1.66cm;
+  top: 2.5cm;
   background-color: rgba(0, 255, 0, 0.233);
   padding-left: 0.3cm;
   padding-right: 0.3cm;
@@ -27,6 +52,7 @@ body {
   display: flex;
   width: 15%;
   border-radius: 25px;
+  color: #ffffff;
 }
 .imgcontainer {
   float: left;
@@ -59,7 +85,7 @@ body {
   vertical-align: middle;
   justify-content: center;
   display: flex;
-  text-shadow: 2px 2px 0px rgb(56, 56, 56);
+  text-shadow: 2px 2px 0px rgb(255, 255, 255);
 }
 
 .login-button:hover {
@@ -72,6 +98,7 @@ body {
 
 /*NAVBAR*/
 nav {
+  position: fixed;
   background-color: rgba(0, 255, 0, 0.233);
   border-radius: 25px;
   display: flex;
@@ -79,6 +106,7 @@ nav {
   padding-block: 0.4cm;
   width: 8.5cm;
   margin-left: 50px;
+  top: 0.5cm;
 }
 
 nav ul {
