@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/css/styling.css" />
     <link rel="stylesheet" type="text/css" href="/css/games_styling.css" />
+    <link rel="stylesheet" type="text/css" href="/css/web_quiz_styling.css" />
+
     <script defer src="/js/learnJava.js"></script>
     <script defer src="/js/hangman.js"></script>
+    <script defer src="/js/webquiz.js"></script>
+
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/materia/bootstrap.min.css" integrity="sha384-B4morbeopVCSpzeC1c4nyV0d0cqvlSAfyXVfrPJa25im5p+yEN/YmhlgQP/OyMZD" crossorigin="anonymous">
   </head>
@@ -65,21 +69,20 @@
         </div>
     </form>
 
-    <script src="learnJava.js"></script>
   </body>
+<div class="quiz-container">
+  <body>
+    <h1 class="quiz-title">QUIZ Time</h1>
+    <div class="quiz-current-question">Current question: <span id="question">questions goes here 404</span></div>
+    <div class=question-status>This is question <span id="current-question-count">1</span> out of <span id="max-question">10</span></div>
+    <div class="answer-boxes" id="answer-boxes">
+      <button id="answer-0">Answer goes here</button> 
+      <button id="answer-1">Answer goes here</button>
+      <button id="answer-2">Answer goes here</button>
 
-  <div class="hangman-container">
-    <body>
-      <h1 class="text-center">Hangman Game</h1>
-      <div class="text-center">Wrong Guesses: <span id='misstakes'>0</span> of <span id='maxWrong'>6</span></div>
-      <div class="text-center">
-        <img class="hangman-img" id='hangmanPic' src='/Images/hangman/0.jpg' alt="">
-        <p class="hangman-text text-red">Guess the Programming Language:</p>
-        <p class="hangman-text" id="wordSpotlight">The word to be guessed goes here</p>
-        <div id="keyboard"></div>
-        <button class="btn btn-info" onClick="reset()">Reset</button>
-      </div>
-    </body>
-  </div>
+    </div>
+  </body>
+</div>
+  
 
 </html>
