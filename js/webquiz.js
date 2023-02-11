@@ -23,13 +23,19 @@ let currentQuestionCount = 0;
 let inputAnswer = "";
 let currentQuestion = "";
 let currentQuestionID;
+let questionCounter = 0;
+
+let score = 0;
 
 //Buttons
 var inputButtons = [];
 
 var answerArr = [];
-
 function displayQuestion() {
+  questionCounter++;
+  if (questionCounter > questions.length - 1) {
+    location.reload();
+  }
   let randomID = Math.floor(Math.random() * questions.length);
   currentQuestionID = document.getElementById("question").innerHTML =
     questions[randomID];
@@ -59,18 +65,40 @@ function displayAnswer() {
 function whenAnswerClick(button) {
   input = button.value;
   if (input === answers[0][0]) {
+    addScore();
+
     displayQuestion();
     displayAnswer();
   } else if (input === answers[1][0]) {
+    addScore();
+
     displayQuestion();
     displayAnswer();
   } else if (input === answers[2][2]) {
-    displayAnswer();
+    addScore();
     displayQuestion();
+    displayAnswer();
   } else {
-    console.log(input);
+    removeScore();
+
     console.log("else reached! WARNING");
   }
+}
+function removeScore() {
+  let scoreElement = document.getElementById("score");
+  scoreElement.classList.remove("score");
+
+  scoreElement.classList.add("score-red");
+  score--;
+  document.getElementById("score").innerHTML = score;
+}
+function addScore() {
+  let scoreElement = document.getElementById("score");
+  scoreElement.classList.remove("score-red");
+
+  scoreElement.classList.add("score");
+  score++;
+  document.getElementById("score").innerHTML = score;
 }
 
 document.getElementById("answer-0").addEventListener("click", function () {
@@ -82,5 +110,7 @@ document.getElementById("answer-1").addEventListener("click", function () {
 document.getElementById("answer-2").addEventListener("click", function () {
   whenAnswerClick(this);
 });
+document.getElementById("score").innerHTML = score;
+document.getElementById("max-question").innerHTML = maxQuestions;
 
 displayAnswer();
