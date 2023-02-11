@@ -44,16 +44,16 @@ function displayAnswer() {
   let randomID = Math.floor(Math.random() * answers.length);
   currentQuestionID = randomID;
 
-  document.getElementById("question").innerHTML = questions[randomID];
+  document.getElementById("question").innerHTML = questions[currentQuestionID];
 
-  document.getElementById("answer-0").innerHTML = answers[randomID][0];
-  document.getElementById("answer-0").value = answers[randomID][0];
+  document.getElementById("answer-0").innerHTML = answers[currentQuestionID][0];
+  document.getElementById("answer-0").value = answers[currentQuestionID][0];
 
-  document.getElementById("answer-1").innerHTML = answers[randomID][1];
-  document.getElementById("answer-1").value = answers[randomID][1];
+  document.getElementById("answer-1").innerHTML = answers[currentQuestionID][1];
+  document.getElementById("answer-1").value = answers[currentQuestionID][1];
 
-  document.getElementById("answer-2").innerHTML = answers[randomID][2];
-  document.getElementById("answer-2").value = answers[randomID][2];
+  document.getElementById("answer-2").innerHTML = answers[currentQuestionID][2];
+  document.getElementById("answer-2").value = answers[currentQuestionID][2];
   //answers.splice(randomID, 1);
 }
 function whenAnswerClick(button) {
