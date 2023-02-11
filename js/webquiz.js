@@ -31,11 +31,17 @@ let score = 0;
 var inputButtons = [];
 
 var answerArr = [];
+
+if (score < 0) {
+  location.reload();
+}
+
 function displayQuestion() {
   questionCounter++;
   if (questionCounter > questions.length - 1) {
     location.reload();
   }
+
   let randomID = Math.floor(Math.random() * questions.length);
   currentQuestionID = document.getElementById("question").innerHTML =
     questions[randomID];
@@ -64,6 +70,7 @@ function displayAnswer() {
 }
 function whenAnswerClick(button) {
   input = button.value;
+
   if (input === answers[0][0]) {
     addScore();
 
@@ -80,7 +87,9 @@ function whenAnswerClick(button) {
     displayAnswer();
   } else {
     removeScore();
-
+    if (score < 0) {
+      location.reload();
+    }
     console.log("else reached! WARNING");
   }
 }
