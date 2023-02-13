@@ -1,21 +1,47 @@
+// var questions = [
+//   "What are the colors of the Greek flag?",
+//   "Does beavers exist in Sweden?",
+//   "In Sweden, what is the punishment for going to church with a hat on?",
+// ];
+// var answers = [];
+
+// answers[0] = ["White and blue.", "Green, red and blue.", "Red and green."];
+
+// answers[1] = [
+//   "Yes they exist in Sweden.",
+//   "No.",
+//   "Yes they exist, but only when they swim from Canada.",
+// ];
+// answers[2] = [
+//   "100$ Citation.",
+//   "Jailtime, 1 week to 9 weeks.",
+//   "There is no punishment.",
+// ];
 var questions = [
-  "What are the colors of the Greek flag?",
-  "Does beavers exist in Sweden?",
-  "In Sweden, what is the punishment for going to church with a hat on?",
-];
-var answers = [];
-
-answers[0] = ["White and blue.", "Green, red and blue.", "Red and green."];
-
-answers[1] = [
-  "Yes they exist in Sweden.",
-  "No.",
-  "Yes they exist, but only when they swim from Canada.",
-];
-answers[2] = [
-  "100$ Citation.",
-  "Jailtime, 1 week to 9 weeks.",
-  "There is no punishment.",
+  {
+    question: "What are the colors of the Greek flag?",
+    answers: ["White and blue", "Green, red and blue", "Red and green"],
+    correctAnswer: 0, // index of the correct answer
+  },
+  {
+    question: "Does beavers exist in Sweden?",
+    answers: [
+      "Yes they exist in Sweden",
+      "No",
+      "Yes they exist, but only when they swim from Canada",
+    ],
+    correctAnswer: 0, // index of the correct answer
+  },
+  {
+    question:
+      "In Sweden, what is the punishment for going to church with a hat on?",
+    answers: [
+      "$100 citation",
+      "Jail time, 1 week to 9 weeks",
+      "There is no punishment",
+    ],
+    correctAnswer: 2, // index of the correct answer
+  },
 ];
 
 let maxQuestions = 3;
@@ -45,7 +71,7 @@ function displayQuestion() {
   let randomID = Math.floor(Math.random() * questions.length);
   currentQuestionID = document.getElementById("question").innerHTML =
     questions[randomID];
-  //questions.splice(randomID, 1);
+  //'questions.splice(randomID, 1);
   return currentQuestion;
 }
 function displayAnswer() {
@@ -53,36 +79,33 @@ function displayAnswer() {
   document.getElementById("current-question-count").innerHTML =
     currentQuestionCount;
 
-  let randomID = Math.floor(Math.random() * answers.length);
+  let randomID = Math.floor(Math.random() * questions.length);
   currentQuestionID = randomID;
 
-  document.getElementById("question").innerHTML = questions[currentQuestionID];
+  document.getElementById("question").innerHTML =
+    questions[currentQuestionID].question;
 
-  document.getElementById("answer-0").innerHTML = answers[currentQuestionID][0];
-  document.getElementById("answer-0").value = answers[currentQuestionID][0];
+  document.getElementById("answer-0").innerHTML =
+    questions[currentQuestionID].answers[0];
+  document.getElementById("answer-0").value =
+    questions[currentQuestionID].correctAnswer === 0 ? "correct" : "incorrect";
 
-  document.getElementById("answer-1").innerHTML = answers[currentQuestionID][1];
-  document.getElementById("answer-1").value = answers[currentQuestionID][1];
+  document.getElementById("answer-1").innerHTML =
+    questions[currentQuestionID].answers[1];
+  document.getElementById("answer-1").value =
+    questions[currentQuestionID].correctAnswer === 1 ? "correct" : "incorrect";
 
-  document.getElementById("answer-2").innerHTML = answers[currentQuestionID][2];
-  document.getElementById("answer-2").value = answers[currentQuestionID][2];
-  //answers.splice(randomID, 1);
+  document.getElementById("answer-2").innerHTML =
+    questions[currentQuestionID].answers[2];
+  document.getElementById("answer-2").value =
+    questions[currentQuestionID].correctAnswer === 2 ? "correct" : "incorrect";
 }
 function whenAnswerClick(button) {
   input = button.value;
 
-  if (input === answers[0][0]) {
+  if (input === "correct") {
     addScore();
 
-    displayQuestion();
-    displayAnswer();
-  } else if (input === answers[1][0]) {
-    addScore();
-
-    displayQuestion();
-    displayAnswer();
-  } else if (input === answers[2][2]) {
-    addScore();
     displayQuestion();
     displayAnswer();
   } else {
