@@ -127,7 +127,7 @@ let currentQuestionCount = 0;
 let inputAnswer = "";
 let currentQuestion = "";
 let currentQuestionID;
-let questionCounter = 0;
+let questionCounter = 1;
 
 let score = 0;
 
@@ -147,8 +147,11 @@ if (score < 0) {
 
 function displayQuestion() {
   questionCounter++;
+  document.getElementById("current-question-count").innerHTML = questionCounter;
+
   if (questionCounter > questions.length + 1) {
     location.reload();
+    console.log("You have reached max questions!");
   }
 
   let randomID = Math.floor(Math.random() * questions.length);
@@ -156,10 +159,6 @@ function displayQuestion() {
     questions[randomID];
 }
 function displayAnswer() {
-  currentQuestionCount++;
-  document.getElementById("current-question-count").innerHTML =
-    currentQuestionCount;
-
   let randomID = Math.floor(Math.random() * questions.length);
   currentQuestionID = randomID;
 
@@ -186,8 +185,8 @@ function whenAnswerClick(button) {
   input = button.value;
 
   if (input === "correct") {
-    setHighscore();
     addScore();
+    setHighscore();
 
     displayQuestion();
     displayAnswer();
@@ -202,8 +201,9 @@ function whenAnswerClick(button) {
   }
 }
 function setHighscore() {
-  console.log(highscore);
   highscore = localStorage.getItem("highscore");
+  console.log(highscore);
+
   if (score > highscore) {
     highscore = score;
     console.log(`New highscore! ${highscore}`);
@@ -211,19 +211,32 @@ function setHighscore() {
     document.getElementById("highscore").innerHTML = highscore;
     localStorage.setItem("highscore", highscore);
 
-    let scoreElement = document.getElementById("highscore");
-    scoreElement.classList.remove("highscore");
-    scoreElement.classList.add("highscore-increase");
+    let hsElement = document.getElementById("highscore");
+    hsElement.classList.remove("highscore");
+    hsElement.classList.add("highscore-increase");
     setTimeout(function () {
-      scoreElement.classList.remove("highscore-increase"); // remove the score-increase class after 0.5 seconds
+      hsElement.classList.remove("highscore-increase"); // remove the score-increase class after 0.5 seconds
     }, 500);
   }
 }
+function resetHighscore() {
+  localStorage.setItem("highscore", 0);
+  location.reload();
+}
 function removeScore() {
+  let scoreElement = document.getElementById("score");
+  scoreElement.classList.remove("score-red");
+  scoreElement.classList.remove("score");
+  scoreElement.classList.add("score");
+
   score--;
   document.getElementById("score").innerHTML = score;
 }
 function addScore() {
+  let scoreElement = document.getElementById("score");
+  scoreElement.classList.remove("score");
+  scoreElement.classList.add("score-red");
+
   score++;
   document.getElementById("score").innerHTML = score;
 }
