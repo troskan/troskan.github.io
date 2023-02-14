@@ -131,6 +131,11 @@ let questionCounter = 0;
 
 let score = 0;
 
+if (!localStorage.getItem("highscore")) {
+  localStorage.setItem("highscore", 0);
+}
+
+let highscore = localStorage.getItem("highscore");
 //Buttons
 var inputButtons = [];
 
@@ -181,31 +186,44 @@ function whenAnswerClick(button) {
   input = button.value;
 
   if (input === "correct") {
+    setHighscore();
     addScore();
 
     displayQuestion();
     displayAnswer();
   } else {
     removeScore();
+    setHighscore();
+
     if (score < 0) {
       location.reload();
     }
     console.log("else reached! WARNING");
   }
 }
-function removeScore() {
-  let scoreElement = document.getElementById("score");
-  scoreElement.classList.remove("score");
+function setHighscore() {
+  console.log(highscore);
+  highscore = localStorage.getItem("highscore");
+  if (score > highscore) {
+    highscore = score;
+    console.log(`New highscore! ${highscore}`);
 
-  scoreElement.classList.add("score-red");
+    document.getElementById("highscore").innerHTML = highscore;
+    localStorage.setItem("highscore", highscore);
+
+    let scoreElement = document.getElementById("highscore");
+    scoreElement.classList.remove("highscore");
+    scoreElement.classList.add("highscore-increase");
+    setTimeout(function () {
+      scoreElement.classList.remove("highscore-increase"); // remove the score-increase class after 0.5 seconds
+    }, 500);
+  }
+}
+function removeScore() {
   score--;
   document.getElementById("score").innerHTML = score;
 }
 function addScore() {
-  let scoreElement = document.getElementById("score");
-  scoreElement.classList.remove("score-red");
-
-  scoreElement.classList.add("score");
   score++;
   document.getElementById("score").innerHTML = score;
 }
@@ -221,5 +239,6 @@ document.getElementById("answer-2").addEventListener("click", function () {
 });
 document.getElementById("score").innerHTML = score;
 document.getElementById("max-question").innerHTML = maxQuestions;
+document.getElementById("highscore").innerHTML = highscore;
 
 displayAnswer();
