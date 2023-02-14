@@ -9,7 +9,7 @@
 
     <script defer src="/js/webquiz.js"></script>
 
-    <title>Document</title>
+    <title>Quiz Game</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/materia/bootstrap.min.css" integrity="sha384-B4morbeopVCSpzeC1c4nyV0d0cqvlSAfyXVfrPJa25im5p+yEN/YmhlgQP/OyMZD" crossorigin="anonymous">
   </head>
 
@@ -32,10 +32,18 @@
           <div id="score-bar" class="score-bar">Score: <span id="score" class="score">*current score*</span> Highscore: <span id="highscore" class="highscore">*current highscore*</span></div>
           <button id="reset-highscore" class="reset-highscore" onclick="resetHighscore()">Reset Highscore</button>
           <button id="exit-button" class="exit-button-class" href="index.html">Exit Game</button>
+          <script>
+            var exitButton = document.getElementById("exit-button");
+          
+            exitButton.addEventListener("click", function() {
+              window.location.href = "index.html";
+            });
+          </script>
         </div>
         
         <footer><div class="footer-pics"><a target="_blank" href="https://github.com/troskan"><img class="github"  src="/Images/GitHub_Logo.png"></a> <a target="_blank" href="https://www.linkedin.com/in/alvin-strandberg-612954253/"><img class="linkedin" src="https://content.linkedin.com/content/dam/me/brand/en-us/brand-home/logos/In-Blue-Logo.png.original.png"></a></div></footer>
       </body>
+      
   </html>
 </div>
 
