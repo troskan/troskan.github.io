@@ -187,10 +187,13 @@ function whenAnswerClick(button) {
   if (input === "correct") {
     addScore();
     setHighscore();
-
+    var audio = new Audio("/Sounds/correct.mp3");
+    audio.play();
     displayQuestion();
     displayAnswer();
   } else {
+    var audio = new Audio("/Sounds/incorrect.mp3");
+    audio.play();
     removeScore();
     setHighscore();
 
