@@ -122,7 +122,7 @@ var questions = [
   },
 ];
 
-let maxQuestions = questions.length;
+let maxQuestions = 20;
 let currentQuestionCount = 0;
 let inputAnswer = "";
 let currentQuestion = "";
@@ -149,7 +149,7 @@ function displayQuestion() {
   questionCounter++;
   document.getElementById("current-question-count").innerHTML = questionCounter;
 
-  if (questionCounter > questions.length + 1) {
+  if (questionCounter > maxQuestions) {
     location.reload();
     console.log("You have reached max questions!");
   }
@@ -225,17 +225,21 @@ function resetHighscore() {
 }
 function removeScore() {
   let scoreElement = document.getElementById("score");
-  scoreElement.classList.remove("score-red");
   scoreElement.classList.remove("score");
-  scoreElement.classList.add("score");
+  scoreElement.classList.add("score-red");
 
+  setTimeout(function () {
+    scoreElement.classList.remove("score-red"); // remove the score-increase class after 0.5
+    scoreElement.classList.add("score");
+    seconds;
+  }, 500);
   score--;
   document.getElementById("score").innerHTML = score;
 }
 function addScore() {
   let scoreElement = document.getElementById("score");
-  scoreElement.classList.remove("score");
-  scoreElement.classList.add("score-red");
+  scoreElement.classList.remove("score-red");
+  scoreElement.classList.add("score");
 
   score++;
   document.getElementById("score").innerHTML = score;

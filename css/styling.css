@@ -37,7 +37,7 @@ span {
 body {
   background-image: url("../Images/ny-bg.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-size: cover;
 }
 .login-button2 {

@@ -120,3 +120,15 @@
 #highscore {
   color: rgb(0, 255, 0);
 }
+.footer-pics {
+  display: block;
+  background-color: azure;
+}
+.github {
+  width: 100px;
+  height: 100px;
+}
+.linkedin {
+  width: 100px;
+  height: 80px;
+}
