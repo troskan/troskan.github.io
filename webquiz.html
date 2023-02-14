@@ -4,12 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/css/styling.css" />
-    <link rel="stylesheet" type="text/css" href="/css/games_styling.css" />
+
     <link rel="stylesheet" type="text/css" href="/css/web_quiz_styling.css" />
 
-    <script defer src="/js/learnJava.js"></script>
-    <script defer src="/js/hangman.js"></script>
     <script defer src="/js/webquiz.js"></script>
 
     <title>Document</title>
@@ -17,82 +14,29 @@
   </head>
 
   <body>
-    <nav>
-  <ul>
-    <li class="home-button"><a href="index.html">Home</a></li>
-    <li class="about-button"><a href="games.html">Games</a></li>
-    <li class="contact-button"> <a href="#">Contact</a></li>
-    <li class="contact-button"> <a onclick="clickToLogin()" href="#" >Login</a></li>
-  </ul>
-</nav>
-    <form>
-    </button>
-    
-        <div id="login-container" class="login-container"style="display:none">
-          <label for="username"><b>Username</b></label>
-          <input
-            type="text"
-            class="form-box"
-            id="username"
-            placeholder="Enter Username"
-            name="username"
-          />
-
-          <label for="password"><b>Password</b></label>
-          <input
-            type="password"
-            class="form-box"
-            id="password"
-            placeholder="Enter Password"
-            name="password"
-          />
-
-          <button type="button" class="login-button" onclick="checkLogin()">
-            Login
-          </button>
-          <label>
-            <input
-              type="checkbox"
-              class="form-box"
-              checked="checked"
-              name="remember"
-            />
-            Remember me
-          </label>
-          <span class="psw"
-            ><a href="forgotpassword.html">Forgot password?</a></span
-          >
+    <div class="quiz-container">
+      <body>
+        <h1 class="quiz-title">QUIZ Time</h1>
+        <div class="quiz-current-question">Current question: <span id="question">questions goes here 404</span></div>
+        <div class=question-status>This is question <span id="current-question-count">1</span> out of <span id="max-question">10</span></div>
+        <div class="answer-boxes" id="answer-boxes">
+          <div>
+            <button id="answer-0" value="answer-0" >Answer goes here</button>
+          </div>
+          <div>
+            <button id="answer-1" value="answer-1" >Answer goes here</button>
+          </div>
+          <div>
+            <button id="answer-2" value="answer-2">Answer goes here</button>
+          </div>
+          <div id="score-bar" class="score-bar">Score: <span id="score" class="score">*current score*</span> Highscore: <span id="highscore" class="highscore">*current highscore*</span></div>
+          <button id="reset-highscore" class="reset-highscore" onclick="resetHighscore()">Reset Highscore</button>
+          <button id="exit-button" class="exit-button-class" href="index.html">Exit Game</button>
         </div>
-        <div class="login-container2" id="login-container"style="display:none">
-          <span class="psw"
-            ><a href="forgotpassword.html">Forgot password?</a></span>
-        </div>
-    </form>
-
-  </body>
-<div class="quiz-container">
-  <body>
-    <h1 class="quiz-title">QUIZ Time</h1>
-    <div class="quiz-current-question">Current question: <span id="question">questions goes here 404</span></div>
-    <div class=question-status>This is question <span id="current-question-count">1</span> out of <span id="max-question">10</span></div>
-    <div class="answer-boxes" id="answer-boxes">
-      <div>
-        <button id="answer-0" value="answer-0" >Answer goes here</button>
-      </div>
-      <div>
-        <button id="answer-1" value="answer-1" >Answer goes here</button>
-      </div>
-      <div>
-        <button id="answer-2" value="answer-2">Answer goes here</button>
-      </div>
-      <div id="score-bar" class="score-bar">Score: <span id="score" class="score">*current score*</span> Highscore: <span id="highscore" class="highscore">*current highscore*</span></div>
-      <button id="reset-highscore" class="reset-highscore" onclick="resetHighscore()">Reset Highscore</button>
-      <!-- <footer><div class="footer-pics"><img class="github" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"> <img class="linkedin" src="https://content.linkedin.com/content/dam/me/brand/en-us/brand-home/logos/In-Blue-Logo.png.original.png"></div></footer> -->
-
-    </div>
-
-</html>
-  </body>
+        
+        <footer><div class="footer-pics"><a target="_blank" href="https://github.com/troskan"><img class="github"  src="/Images/GitHub_Logo.png"></a> <a target="_blank" href="https://www.linkedin.com/in/alvin-strandberg-612954253/"><img class="linkedin" src="https://content.linkedin.com/content/dam/me/brand/en-us/brand-home/logos/In-Blue-Logo.png.original.png"></a></div></footer>
+      </body>
+  </html>
 </div>
 
 

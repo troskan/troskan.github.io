@@ -1,3 +1,9 @@
+body {
+  background-image: url("../Images/games-bg.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+}
 #answer-0 {
   width: 100%;
   padding: 10px;
@@ -79,6 +85,7 @@
   border-radius: 50px;
   width: 300px;
   height: 100px;
+  margin: 10px;
 }
 .question-status {
   background-color: #000;
@@ -91,6 +98,7 @@
   position: relative;
   bottom: -100px;
   margin: auto;
+  display: flexbox;
 }
 .score-bar {
   background-color: rgba(0, 0, 0, 0.834);
@@ -120,15 +128,45 @@
 #highscore {
   color: rgb(0, 255, 0);
 }
+.reset-highscore {
+  margin: 10px;
+  color: rgb(201, 0, 0);
+  font-weight: bold;
+}
+.exit-button-class {
+  margin: 10px;
+  color: rgb(201, 0, 0);
+  font-weight: bold;
+}
+.exit-button-class:hover {
+  background-color: rgba(249, 0, 0, 0.515);
+  color: white;
+}
+.reset-highscore:hover {
+  background-color: rgba(249, 0, 0, 0.515);
+  color: white;
+}
 .footer-pics {
-  display: block;
-  background-color: azure;
+  position: fixed;
+  display: inline-flex;
+  bottom: 0;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.692);
+  border-radius: 4px;
+  text-align: center;
+  padding: 8px;
+  left: 50%; /* add left property with value of 50% */
+  transform: translateX(-50%); /* center the element horizontally */
+}
+.footer-pics {
 }
 .github {
-  width: 100px;
+  width: 150px;
   height: 100px;
+  margin-right: 10px;
 }
 .linkedin {
+  margin-left: 10px;
   width: 100px;
-  height: 80px;
+  height: 100px;
 }
