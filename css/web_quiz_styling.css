@@ -144,7 +144,7 @@ body {
 }
 .reset-highscore:hover {
   background-color: rgba(249, 0, 0, 0.515);
-  color: white;
+  color: red;
 }
 .footer-pics {
   position: fixed;
