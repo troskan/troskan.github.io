@@ -1,8 +1,5 @@
 body {
-  background-image: url("../Images/games-bg.jpg");
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  background-size: cover;
+  background-color: rgb(25, 28, 25);
 }
 #answer-0 {
   width: 100%;
@@ -71,7 +68,6 @@ body {
   width: 300px;
   height: 100px;
   border-radius: 15px;
-  bottom: -5cm;
 }
 
 .quiz-title {
@@ -81,24 +77,27 @@ body {
 }
 .quiz-current-question {
   background-color: rgb(255, 255, 255);
-  padding: 0.5cm;
-  border-radius: 50px;
+  border-radius: 0.2rem;
   width: 300px;
   height: 100px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
 }
 .question-status {
   background-color: #000;
   color: aliceblue;
   width: 300px;
 }
+.grid-container {
+  display: grid;
+  margin-top: 5%;
+  min-height: 100vh;
+  justify-content: center; /* Add this line */
+}
+
 .quiz-container {
-  width: 300px;
   text-align: center;
-  position: relative;
-  bottom: -100px;
-  margin: auto;
-  display: flexbox;
 }
 .score-bar {
   background-color: rgba(0, 0, 0, 0.834);
@@ -145,28 +144,4 @@ body {
 .reset-highscore:hover {
   background-color: rgba(249, 0, 0, 0.515);
   color: red;
-}
-.footer-pics {
-  position: fixed;
-  display: inline-flex;
-  bottom: 0;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.692);
-  border-radius: 4px;
-  text-align: center;
-  padding: 8px;
-  left: 50%; /* add left property with value of 50% */
-  transform: translateX(-50%); /* center the element horizontally */
-}
-.footer-pics {
-}
-.github {
-  width: 150px;
-  height: 100px;
-  margin-right: 10px;
-}
-.linkedin {
-  margin-left: 10px;
-  width: 100px;
-  height: 100px;
 }

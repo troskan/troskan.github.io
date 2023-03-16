@@ -188,6 +188,7 @@ function whenAnswerClick(button) {
     addScore();
     setHighscore();
     var audio = new Audio("/Sounds/correct.mp3");
+    audio.volume = 0.2;
     audio.play();
     displayQuestion();
     displayAnswer();
