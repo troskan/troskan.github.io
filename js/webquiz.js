@@ -1,22 +1,3 @@
-// var questions = [
-//   "What are the colors of the Greek flag?",
-//   "Does beavers exist in Sweden?",
-//   "In Sweden, what is the punishment for going to church with a hat on?",
-// ];
-// var answers = [];
-
-// answers[0] = ["White and blue.", "Green, red and blue.", "Red and green."];
-
-// answers[1] = [
-//   "Yes they exist in Sweden.",
-//   "No.",
-//   "Yes they exist, but only when they swim from Canada.",
-// ];
-// answers[2] = [
-//   "100$ Citation.",
-//   "Jailtime, 1 week to 9 weeks.",
-//   "There is no punishment.",
-// ];
 var questions = [
   {
     question: "What is the capital city of Australia?",
@@ -215,12 +196,12 @@ function setHighscore() {
     document.getElementById("highscore").innerHTML = highscore;
     localStorage.setItem("highscore", highscore);
 
-    let hsElement = document.getElementById("highscore");
-    hsElement.classList.remove("highscore");
-    hsElement.classList.add("highscore-increase");
-    setTimeout(function () {
-      hsElement.classList.remove("highscore-increase"); // remove the score-increase class after 0.5 seconds
-    }, 500);
+    // let hsElement = document.getElementById("highscore");
+    // hsElement.classList.remove("highscore");
+    // hsElement.classList.add("highscore-increase");
+    // setTimeout(function () {
+    //   hsElement.classList.remove("highscore-increase"); // remove the score-increase class after 0.5 seconds
+    // }, 500);
   }
 }
 function resetHighscore() {

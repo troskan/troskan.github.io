@@ -2,35 +2,21 @@ body {
   background: url("/Images/johannes-ludwig-8dejZGw3Hec-unsplash.jpg") no-repeat
     center center fixed;
   background-size: cover;
+  font-family: "Roboto Slab", serif;
 }
-#answer-0 {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-#answer-1 {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
+#answer-0,
+#answer-1,
 #answer-2 {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.67);
 }
 
-#answer-0:hover {
-  background-color: rgb(60, 255, 0);
-  animation: bouncing 0.5s ease-in-out;
-  transform-origin: center bottom;
-}
-#answer-1:hover {
-  background-color: rgb(60, 255, 0);
-  animation: bouncing 0.5s ease-in-out;
-  transform-origin: center bottom;
-}
+#answer-0:hover,
+#answer-1:hover,
 #answer-2:hover {
-  background-color: rgb(60, 255, 0);
+  background-color: rgba(60, 255, 0, 0.703);
   animation: bouncing 0.5s ease-in-out;
   transform-origin: center bottom;
 }
@@ -73,18 +59,20 @@ body {
 }
 
 .quiz-title {
-  background-color: rgb(251, 255, 0);
+  background-color: rgba(255, 255, 255, 0.763);
+  border: 1px solid rgba(0, 0, 0, 0.44);
   padding: 0.5cm;
   border-radius: 50px;
 }
 .quiz-current-question {
-  background-color: rgb(255, 255, 255);
-  border-radius: 0.2rem;
+  border-radius: 1rem;
   width: 300px;
   height: 100px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 0px;
+  background-color: rgba(255, 255, 255, 0.763);
+  border: 1px solid rgba(0, 0, 0, 0.44);
 }
 .question-status {
   background-color: #000;
