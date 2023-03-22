@@ -1,5 +1,7 @@
 body {
-  background-color: rgb(25, 28, 25);
+  background: url("/Images/johannes-ludwig-8dejZGw3Hec-unsplash.jpg") no-repeat
+    center center fixed;
+  background-size: cover;
 }
 #answer-0 {
   width: 100%;
